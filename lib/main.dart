@@ -84,15 +84,139 @@ class HomeActivity extends StatelessWidget {
         onPressed: () {},
       ),
       bottomNavigationBar: BottomNavigationBar(
-
-          currentIndex: 0,
-          selectedItemColor: Color(0xFF002B5B),
-          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
-          items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.orange,), label: "Home",),
-        BottomNavigationBarItem(icon: Icon(Icons.message,color: Colors.orange,), label: "Message",),
-        BottomNavigationBarItem(icon: Icon(Icons.person,color: Colors.orange,), label: "Person",),
-      ]),
+        currentIndex: 0,
+        selectedItemColor: Color(0xFF002B5B),
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              color: Colors.orange,
+            ),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.message,
+              color: Colors.orange,
+            ),
+            label: "Message",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
+              color: Colors.orange,
+            ),
+            label: "Person",
+          ),
+        ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              padding: EdgeInsets.all(0),
+              child: UserAccountsDrawerHeader(
+                accountName: const Text(
+                  "Gopal Saha",
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                accountEmail: const Text(
+                  "gopalsaha@gmail.com",
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.home,
+                color: Colors.orange,
+              ),
+              title: const Text(
+                "Home",
+                style: TextStyle(
+                  color: Color(0xFF002B5B),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.message,
+                color: Colors.orange,
+              ),
+              title: const Text(
+                "Contact",
+                style: TextStyle(
+                  color: Color(0xFF002B5B),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.person,
+                color: Colors.orange,
+              ),
+              title: const Text(
+                "Profile",
+                style: TextStyle(
+                  color: Color(0xFF002B5B),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.email,
+                color: Colors.orange,
+              ),
+              title: const Text(
+                "Email",
+                style: TextStyle(
+                  color: Color(0xFF002B5B),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.phone,
+                color: Colors.orange,
+              ),
+              title: const Text(
+                "Phone",
+                style: TextStyle(
+                  color: Color(0xFF002B5B),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: Color(0xFFE5E7E9),
+      ),
+      body: const Center(
+        child: Text(
+          "Basic App",
+          style: TextStyle(
+            fontSize: 25,
+            fontFamily: 'Time New Roman',
+            color: Color(0xFF002B5B),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      backgroundColor: Color(0xFFE5E7E9),
     );
   }
 }
